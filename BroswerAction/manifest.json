@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "鐵人賽-Browser-Action",
+    "description": "就來作作第一個Browser-Action",
+    "version": "1.2",
+    "browser_action": {
+        "default_title": "羅拉拉的第一個擴充套件",
+        "default_icon": { // optional
+            "16": "icon.png", // optional
+            "24": "icon24.png", // optional
+            "32": "icon32.png" // optional
+        },
+        "default_popup": "popup.html"
+    }
+}
