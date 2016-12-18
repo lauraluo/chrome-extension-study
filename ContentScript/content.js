@@ -1,3 +1,5 @@
+console.log("內插腳本載入");
+
 (function() {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(callback) {
@@ -14,6 +16,7 @@ var button = document.createElement("div");
 button.id = "snow-button";
 
 if (cover.length > 0) {
+    console.log("插入Canvas及雪人");
     cover[0].appendChild(canvas);
     cover[0].appendChild(button);
     var flakes = [],
@@ -121,6 +124,6 @@ if (cover.length > 0) {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     })
-
+    console.log("開始下雪");
     init();
 }
