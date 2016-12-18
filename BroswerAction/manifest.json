@@ -9,7 +9,7 @@
             "16": "icon.png", // optional
             "24": "icon24.png", // optional
             "32": "icon32.png" // optional
-        }
-        // "default_popup": "popup.html"
+        },
+        "default_popup": "popup.html"
     }
 }
