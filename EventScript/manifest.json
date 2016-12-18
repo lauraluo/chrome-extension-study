@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "鐵人賽-事件腳本範例",
+    "description": "羅拉拉的事件腳本範例",
+    "version": "2.0",
+    "browser_action": {
+        "default_title": "羅拉拉的事件腳本範例",
+        "default_icon": { 
+            "16": "icon.png", 
+            "24": "icon24.png", 
+            "32": "icon32.png" 
+        }
+        // "default_popup": "popup.html"
+        // 如果彈出視窗有設定的話，會檔掉瀏覽器的點擊事件(chrome.browserAction.onClicked)，故這次的範例中我們不使用彈出視窗
+    },
+    "background" : {
+        "scripts" : ["event.js"],
+        "persistent" : false
+    }
+}
