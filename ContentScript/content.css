@@ -1,0 +1,48 @@
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes zboing {
+    0% {
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        transform: scale3d(1.2, 0.75, 1)
+    }
+
+    40% {
+        transform: scale3d(0.85, 1.25, 1)
+    }
+
+    50% {
+        transform: scale3d(1.05, 0.85, 1)
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1)
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+#snow-button{
+    background: url('https://lh3.googleusercontent.com/nTqfRkzDUd9qFhLs2aN-ZgxiNc3QqAi4Zk5ChrCpC0KKMUzfSAfnE-kRwUItDR--m-m7s5c4z-wkm0C0cctForQUFJBWDjo=w10240-h5760-rw-no') no-repeat 0 0;
+    width: 200px;
+    height: 200px;
+    background-size: 100% auto;
+    -webkit-animation: zboing 1.3s infinite 1s;
+    position: absolute;
+    top: 30px;
+    left: 40%;
+}
