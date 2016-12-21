@@ -37,7 +37,7 @@ canvas {
 }
 
 #snow-button{
-    /*background: url('https://lh3.googleusercontent.com/nTqfRkzDUd9qFhLs2aN-ZgxiNc3QqAi4Zk5ChrCpC0KKMUzfSAfnE-kRwUItDR--m-m7s5c4z-wkm0C0cctForQUFJBWDjo=w10240-h5760-rw-no') no-repeat 0 0;*/    
+    background: url('https://lh3.googleusercontent.com/nTqfRkzDUd9qFhLs2aN-ZgxiNc3QqAi4Zk5ChrCpC0KKMUzfSAfnE-kRwUItDR--m-m7s5c4z-wkm0C0cctForQUFJBWDjo=w10240-h5760-rw-no') no-repeat 0 0;
     width: 200px;
     height: 200px;
     background-size: 100% auto;
@@ -46,3 +46,4 @@ canvas {
     top: 30px;
     left: 40%;
 }
+

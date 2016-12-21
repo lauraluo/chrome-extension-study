@@ -1,0 +1,16 @@
+{
+    "manifest_version" : 2,
+    "name" : "鐵人賽-Page-Action1",
+    "description" : "啟用方法一：只有在主機是：www.google.com.tw的網域底下啟用此頁面按鈕",
+    "version" : "2.0",
+    "page_action" : {
+        "default_title" : "啟用方法一",
+        "default_icon" : "icon.png",
+        "default_popup": "popup.html"        
+    },
+    "background" : {
+        "scripts" : ["event.js"],
+        "persistent" : false
+    },
+    "permissions" : ["tabs"]
+}

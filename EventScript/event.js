@@ -1,4 +1,4 @@
-console.log("backgroun page ready");
+console.log("background page ready");
 
 
 chrome.browserAction.onClicked.addListener(function(tab) {
