@@ -6,9 +6,7 @@ var rule = {
             pageUrl: { 
                 hostEquals: 'www.google.com.tw', 
                 schemes: ['https']
-            },
-            //必需擁有此dom物件, 以css選擇器的行形式宣告
-            css: ["input[type='password']"]
+            }
         })
     ],
     //動作：啟用頁面按鈕
@@ -24,4 +22,23 @@ chrome.runtime.onInstalled.addListener(function(details) {
         console.log('remove completed!');
         chrome.declarativeContent.onPageChanged.addRules([rule]);
     });
+});
+
+var toggleBg = false;
+
+chrome.commands.onCommand.addListener(function(command) {
+    console.log('Command:', command);
+    if(command == "switch-fb-bg" && toggleBg){
+		chrome.tabs.executeScript({
+		    code: 'document.body.style.backgroundColor="red"'
+		}); 
+
+		toggleBg = !toggleBg;	
+    }
+    else if (command == "switch-fb-bg" && !toggleBg) {
+		chrome.tabs.executeScript({
+		    code: 'document.body.style.backgroundColor="black"'
+		}); 
+    	toggleBg = !toggleBg;	
+    }
 });

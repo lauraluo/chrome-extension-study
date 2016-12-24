@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "鐵人賽-Commands範例",
+    "description": "切換背景顏色",
+    "version": "2.0",
+    "browser_action": {
+        "default_title": "切換背景顏色",
+        "default_icon": "icon.png"
+    },
+    "permissions": ["tabs","activeTab", "declarativeContent"],
+    "commands": {
+        "switch-fb-bg": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "MacCtrl+Shift+Y"
+            },
+            "description": "切換背景顏色"
+        }
+    },
+    "background" : {
+        "scripts" : ["event.js"],
+        "persistent" : false
+    }
+}
