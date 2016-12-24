@@ -1,4 +1,3 @@
-
 var rule = {
     //條件
     conditions: [
@@ -9,7 +8,7 @@ var rule = {
                 schemes: ['https']
             },
             //必需擁有此dom物件, 以css選擇器的行形式宣告
-            css: ["img"]
+            css: ["input[type='password']"]
         })
     ],
     //動作：啟用頁面按鈕
