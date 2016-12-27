@@ -12,6 +12,7 @@ chrome.runtime.onConnect.addListener(function(port){
 		            break;
 	        	default:
 		            port.postMessage({ msg: "好的" });
+                	port.disconnect();
 		            break;
 		    }
 	    });		

@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
                 break;
             case "不，他不在":
                 port.postMessage({ msg: "請幫我留言給他，留言是XXXXXX" });
-                port.disconnect();
                 break;
             default:
                 break;
