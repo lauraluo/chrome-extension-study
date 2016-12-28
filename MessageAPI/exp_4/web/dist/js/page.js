@@ -1,4 +1,4 @@
-﻿var dButton = document.getElementById("button");
+var dButton = document.getElementById("button");
 var extensionID = "ampdcffgccbnfionpljcpncpcjfbhbag";
 
 //點擊按鈕，向擴充功能A發動訊息

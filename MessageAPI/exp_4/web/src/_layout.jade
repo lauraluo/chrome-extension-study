@@ -8,27 +8,6 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
     include _head.jade
     //html body
     body(class="l-index")
-        div.l-wrap
-            //nav
-            include _nav.jade
-            div.l-fb
-                div.l-container
-                    div.fb-box
-                        .fb-like(data-href='#', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true') 
-            div.l-main
-                //main view
-                block page_main
-        div.l-footer.footer
-            div.l-container
-                p footer
-        div.fb-root
+        block page_main
+    script(src="../js/page.js")
   
-    script(type='text/javascript').         
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));

@@ -1,16 +1,19 @@
 {
-    "manifest_version" : 2,
-    "name" : "擴充功能A",
-    "description" : "擴充功能A",
-    "version" : "2.0",
-    "page_action" : {
-        "default_title" : "擴充功能A",
-        "default_icon" : "icon.png",
-        "default_popup": "popup.html"        
+    "manifest_version": 2,
+    "name": "訊息範例-頁面腳本向事件腳本發送訊息",
+    "description": "頁面腳本向事件腳本發送訊息",
+    "version": "2.0",
+    "page_action": {
+        "default_title": "頁面腳本向事件腳本發送訊息",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
     },
-    "background" : {
-        "scripts" : ["event.js"],
-        "persistent" : false
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
     },
-    "permissions" : ["tabs"]
+    "externally_connectable": {
+        "matches": ["*://localhost/*"]
+    },
+    "permissions": ["tabs"]
 }

@@ -1,16 +1,16 @@
 .sprite__demo {
   display: block;
-  background-image: url(../images/sprite.png?v=0.6638227645307779);
+  background-image: url(../images/sprite.png?v=0.9041685862286413);
   background-position: 0px 0px;
   width:500px;
   height: 500px;
-/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\sprite__demo.png*/
+/*source-image:/Users/apple/Documents/Git/chromeExtensionSample/MessageAPI/exp_4/web/src/images/sprites/sprite__demo.png*/
 }
 @mixin sprite__demo() {
   display: block;
-  background-image: url(../images/sprite.png?v=0.6638227645307779);
+  background-image: url(../images/sprite.png?v=0.9041685862286413);
   background-position: 0px 0px;
   width:500px;
   height: 500px;
-/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\sprite__demo.png*/
+/*source-image:/Users/apple/Documents/Git/chromeExtensionSample/MessageAPI/exp_4/web/src/images/sprites/sprite__demo.png*/
 }

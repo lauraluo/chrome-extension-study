@@ -1,12 +1,12 @@
 var toggle = false;
-//可以列出禁止防問的黑名單ID
+//可以列出禁止防問的黑名單網址
 var blockList = [];
 
 chrome.runtime.onMessageExternal.addListener(function(message, sender, sendResponse) {
     console.log(sender);
 
     //如果訪問在黑名單，就不作任何動作
-    if (blockList.indexOf(sender.id) != -1) {
+    if (blockList.indexOf(sender.url) != -1) {
         return;
     }
 
@@ -28,6 +28,6 @@ chrome.runtime.onMessageExternal.addListener(function(message, sender, sendRespo
         });
     }
 
-    sendResponse("來自擴充功能A的訊息：操作完成");
+    sendResponse("來自擴充功能的訊息：操作完成");
 
 });
