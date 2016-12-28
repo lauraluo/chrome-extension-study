@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function(dcle) {
         chrome.runtime.sendMessage(
             extensionID, 
             { name: "切換頁面按鈕" },
-            { includeTlsChannelId: true },
             function(response) {
                 console.log(response);
             });
