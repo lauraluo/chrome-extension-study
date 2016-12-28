@@ -1,0 +1,117 @@
+$ft_height: 0;
+$ft_height_mb: 0;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin: 0 auto;
+    font-family: Arial,'微軟正黑體','Microsoft JhengHei',Verdana,Arial,Helvetica,sans-serif,'STHeiti Light','儷黑 Pro','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體';
+    @include respond-to(small) {
+        html, body {
+            overflow-x: hidden; 
+            //在行動裝置HTML&BODY需一起下OVERFLOW-X        
+        }
+    };
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0 auto;
+    @include respond-to(small-up) {
+        min-width: 960px;
+        min-height: 800px;
+    };
+    @include respond-to(small) {
+        min-width: 640px;
+        -webkit-text-size-adjust: none;
+    }    
+}
+.fb-root {
+    height: 0;
+    overflow: hidden;
+}
+
+.l-container{ 
+    margin: 0 auto;
+    width: 960px;
+    position: relative;
+    max-height: 100000px;
+    @include respond-to(small) {
+        width: 640px;
+    }
+}
+
+
+.l-wrap {
+    min-height: 100%;
+    width:100%;
+    position: relative;
+    overflow:hidden; 
+}
+
+.l-main{
+    padding-bottom: $ft_height;
+    @include respond-to(small) {
+        padding-bottom: $ft_height_mb;
+    };
+}
+
+.l-footer {
+    background: rgba(178,32,2,0.6);
+    position: relative;
+    overflow: hidden;
+    margin-top: -$ft_height;
+    height: $ft_height;
+    line-height: $ft_height; 
+    @include respond-to(small) {
+        margin-top: -$ft_height_mb;
+        height: $ft_height_mb;
+        line-height: $ft_height_mb; 
+    };
+}
+
+.l-fb{
+    position: relative;
+    height: 0;
+    z-index: 1;
+    .fbBox{
+        background: #3B5998;
+        color: #ffffff;
+        width: 200px;
+        height: 20px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        @include respond-to(small) {
+            transform: scale(1.6);
+            transform-origin: left top;
+        }
+    }
+}
+
+
+.l-vm {
+    //使用的時後，請給l-vm層定義高度
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 0;
+      vertical-align: middle;
+    }
+    &__content {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: -0.07em; 
+    }
+}

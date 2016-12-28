@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+
+/* ----- IMPORT -----*/
+
+//1.utils
+@import "utils/_bemify.scss"; //A set of Sass mixins to write well-structured, maintainable, idiomatic BEM-style .scss source:
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+@import "utils/_grid.scss";
+//sprite scss import 至少要啟用gulp一次
+//@import "_sprite.scss";
+//2.vendors
+//3.base
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+//4.layout
+@import "layout/_layout.scss";
+@import "layout/_nav.scss";
+//5.components
+@import "components/_load.scss"; //html 在 load.js 裡
+//6.pages
+//7.themes
+$tran:0.3s ease-in all;
+$boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+
+
+.index {
+    .l-vm {
+        height: 80vh;
+        width: 100%;
+        background: #d6d6d6;
+        text-align: center;
+    }
+    .l-vm__content {
+        background: red;
+        min-height: 200px;
+    }
+    @include respond-to(small-up) {}
+}
+

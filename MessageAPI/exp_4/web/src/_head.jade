@@ -1,0 +1,28 @@
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='edge,chrome=1')
+    title #{pageTitle}
+    meta(name='description', content='#{pageDesc}')
+    meta(name='viewport', content='width=640')
+
+    // Schema.org markup for Google+
+    meta(itemprop="name" content="#{pageTitle}")
+    meta(itemprop="description" content="#{pageDesc}")
+    meta(itemprop="image" content="指定顯示圖片")
+
+    // og
+    meta(property="og:title" content="#{pageTitle}")
+    meta(property="og:description" content="#{pageDesc}")
+    meta(property="og:type" content="article")
+    meta(property="og:image" content="指定顯示圖片")
+
+    //- TODO : Place favicon.ico and apple-touch-icon.png in the root directory
+    link(rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico")
+    link(rel='stylesheet', href='css/main.css')
+
+    <!--CDN link for  TweenMax-->
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/mobile-detect/0.4.3/mobile-detect.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js")
+    script(src="https://code.createjs.com/preloadjs-0.6.1.min.js")
+    script(src="../js/app.js")

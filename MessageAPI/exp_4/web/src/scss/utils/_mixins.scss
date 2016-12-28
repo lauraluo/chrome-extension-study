@@ -1,0 +1,66 @@
+﻿/* 
+_mixins
+*/
+$breaktype: (
+	'small'  : 0,
+	'small-up':  0,
+	'medium' : 0,
+	'large' : 0
+);
+	
+$breakpoints: (
+	'small'  : 640px,
+	'medium' : 960px,
+	'large' : 1441px
+);
+	
+// Retrieves the value from the key
+// If the key exists in the map 
+// Prints a media query based on the value
+@mixin respond-to($breakpoint) {
+
+	$value: map-get($breaktype, $breakpoint);
+	@if $value !=null {
+	    @if $breakpoint=='small' {
+	        @media (max-width: map-get($breakpoints, 'small')) and (min-width: 0) {
+	            @content;
+	        }
+	    }
+	    //排除
+	    @else if $breakpoint=='small-up' {
+	        @media (min-width: map-get($breakpoints, 'small')+1) {
+	            @content;
+	        }
+	    }
+	    @else if $breakpoint=='medium' {
+	        @media (min-width: map-get($breakpoints, 'small')+1) and (max-width: map-get($breakpoints, 'medium')) {
+	            @content;
+	        }
+	    }
+	    @else{
+			@media (min-width: map-get($breakpoints, 'large')){
+			    @content;
+			}
+	    }
+	}
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breaktype}`. " + "Please make sure it is defined in `$breakpoints` map.";
+	}	
+}
+
+@mixin hideText($w,$h){
+    width:$w;
+    height:$h;
+    overflow:hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+}
+
+.hideText {
+	display: block;
+    overflow:hidden;
+    text-indent: 110%;
+    white-space: nowrap;	
+}
+

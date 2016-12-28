@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/*
+ *  Usage: before </body>
+ *
+      <div class="loading-mask">
+	      <div class="sk-three-bounce">
+	        <div class="sk-child sk-bounce1"></div>
+	        <div class="sk-child sk-bounce2"></div>
+	        <div class="sk-child sk-bounce3"></div>
+	      </div>
+      </div>
+ *
+ */
+
+.loading-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    .sk-three-bounce {
+        text-align: center;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        position: relative;
+        top: 50vh;
+        margin: -20px auto 0 auto;
+        width: 100px;
+    }
+    .sk-three-bounce .sk-child {
+        width: 20px;
+        height: 20px;
+        margin: 8px 3px 5px 3px;
+        background-color: #fff;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+        animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+    }
+    .sk-three-bounce .sk-bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    .sk-three-bounce .sk-bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+    @-webkit-keyframes sk-three-bounce {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    @keyframes sk-three-bounce {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}

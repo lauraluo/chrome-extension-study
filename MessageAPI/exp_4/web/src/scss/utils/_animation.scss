@@ -1,0 +1,156 @@
+@keyframes fadeOutBubble {
+    0% {
+        opacity: 1;
+        max-width: 200px;
+        visibility: visible
+    }
+
+    80% {
+        opacity: 0;
+        max-width: 200px
+    }
+
+    100% {
+        opacity: 0;
+        max-width: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes fadeInBubble {
+    0% {
+        opacity: 0;
+        max-width: 200px;
+        visibility: hidden
+    }
+
+    80% {
+        opacity: 1;
+        max-width: 200px;
+        visibility: visible
+    }
+
+    100% {
+        opacity: 1;
+        max-width: 200px;
+        visibility: visible
+    }
+}
+
+
+
+@keyframes jumper {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+@keyframes zboing {
+    0% {
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1)
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1)
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1)
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1)
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+// http://codepen.io/lauraluo/pen/VazLLv
+
+/* .zboing {
+    -webkit-animation: zboing 1.3s forwards
+}
+ */
+
+/*
+ #scrollIndicator {
+  width:30px;
+  height:30px;
+  margin:40px auto;
+  position: relative;
+}
+
+#scrollIndicator i {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: no-repeat center center #ff3466;
+    background-size: 12px;
+    border-radius: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+      -webkit-animation: zboing 1.8s 0.33333s ease-out infinite;
+
+}
+
+#scrollIndicator:before {
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: #ff3466;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+    animation: jumper 1.8s 0.33333s ease-out infinite;
+}
+
+#scrollIndicator:after {
+    content: "";
+    background-color: #ff3466;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+    animation: jumper 1.8s 0.66666s ease-out infinite
+}
+*/

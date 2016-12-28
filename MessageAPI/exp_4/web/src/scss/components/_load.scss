@@ -1,0 +1,58 @@
+.mdLoading{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background: rgba(233,18, 0, 1.0);
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    .loadingBox{
+        width: 640px;
+        margin: 0 auto;
+        text-align: center;
+        .title{
+            position: absolute;
+            width: 450px;
+            height: 120px;
+            top: 50%;
+            margin-top: -120px;
+            left: 50%;
+            margin-left: -225px;
+            .titleBox{
+                position: relative;
+            }
+        }
+        .line2{
+            width: 200px;
+        }
+        .percentage{
+            position: absolute;
+            color:#ffffff;
+            font-size: 3rem;
+            font-family: sans-serif;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            height: 75px;
+            margin-top: -43px;
+        }
+        .progressBar{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            overflow: hidden;
+            .progress{
+                width: 0%;
+                height: 5px;
+                background: #ffffff;
+                transition-property: all;
+                transition: 0.1s;
+                // transition-delay: 0s;
+
+            }
+        }
+    }
+}
