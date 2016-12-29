@@ -1,6 +1,6 @@
 {
 	"manifest_version" : 2,
-	"name" : "鐵人賽-ContentScript範例",
+	"name" : "鐵人賽-使用vue打造ContentUI",
 	"description" : "",
 	"version" : "2.0",
     "page_action": {

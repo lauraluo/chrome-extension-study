@@ -1,21 +1,35 @@
 <template>
     <div class="contentUI" ref="contentUI">
+        <!-- 展開時的畫面 -->
+
+        <!-- vue的動畫組件宣告方式，會跟v-if連動 -->
         <transition name="custom-classes-transition" enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutRight">
+            <!-- v-if 設定區塊顯示的邏輯是根據  data.toggle 這裡的內容會在切換的是後出現或消失 -->
             <div class="contentUI__open-content" v-if="toggle">
                 <h1>擴充功能範例</h1>
                 <h2>使用vue打造內容UI，並且與擴充功能溝通</h2>
                 <p>按下按鈕向事件腳本發送訊息</p>
                 <div>
+                    <!-- v-on:click 綁定點擊事件會執行 開啟 及 關閉 頁面按鈕 方法 -->
                     <a class="contentUI__button" href="#" v-on:click="turnOnThePageAction">開啟頁面按鈕</a>
                     <a class="contentUI__button" href="#" v-on:click="turnOffThePageAction">關閉頁面按鈕</a>
                 </div>
                 <h2>切換內容UI的長相</h2>
                 <p>啟用頁面按鈕後，按下單出視窗的按鈕也能切換長相</p>
+                <!-- v-on:click  綁定點擊事件會執行長相的切換 -->
                 <a class="contentUI__button" href="#" v-on:click="switchView">切換長相</a>
             </div>
         </transition>
+
+        <!-- 關閉時的畫面 -->
+         
+
+
+       <!-- vue的動畫組件宣告方式，會跟v-if連動 -->
         <transition name="custom-classes-transition" enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutRight">
+          <!-- v-if 設定區塊顯示的邏輯是根據  data.toggle 這裡的內容會在切換的是後出現或消失 -->
           <div class="contentUI__close-content" v-if="!toggle">
+            <!-- v-on:click  綁定點擊事件會執行長相的切換 -->
             <a class="contentUI__button" href="#" v-on:click="switchView">切換長相</a>           
           </div>
         <transition>        
@@ -69,7 +83,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .contentUI__open-content {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
