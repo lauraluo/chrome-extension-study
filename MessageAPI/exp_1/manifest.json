@@ -10,8 +10,7 @@
     },    
     "background" : {
         "scripts" : ["event.js"],
-        "persistent" : false,
-        "default_popup": "popup.html"
+        "persistent" : false
     },
 	"content_scripts" : [
 		{
