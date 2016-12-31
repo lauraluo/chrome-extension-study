@@ -1,0 +1,13 @@
+{
+	"manifest_version" : 2,
+	"name" : "API 範例: alarms API",
+	"description" : "周期性的執行通知",
+	"version" : "2.0",
+	"background" : {
+		"scripts" : ["event.js"],
+		"persistent" : false
+	},
+	"permissions" : [
+		"alarms"
+	]
+}
