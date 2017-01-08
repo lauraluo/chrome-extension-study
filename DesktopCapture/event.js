@@ -1,4 +1,4 @@
-chrome.runtime.onInstalled.addListener(function() {
+chrome.browserAction.onClicked.addListener(function() {
     chrome.tabs.create({
         url: "preview.html"
     }, function(tab) {

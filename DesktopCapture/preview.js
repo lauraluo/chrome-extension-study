@@ -50,22 +50,17 @@
 
     //開始錄制的邏輯
     function record(stream) {
+    	//將live區塊的影片來源跟串流接上。
         video.src = URL.createObjectURL(stream);
         shareStream = stream;
 
         var ctx = canvas.getContext('2d');
         sourceTrack = stream.getTracks()[0];
 
-        frames = []; //清空儲存的圖片
-        frameslog = []; //清空儲存的圖片
 
         function drawVideoFrame(time) {
             rafId = requestAnimationFrame(drawVideoFrame);
-
             ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
-            var src = canvas.toDataURL('image/webp', 1);
-
-            frames.push(src);
         };
         //開始截取畫面並把requestAnimationFrame的id儲存起來以便控制
 
@@ -95,7 +90,7 @@
     function exportPreview() {
         //顯示下載按鈕
         dDownloadBtn.show();
-
+        //影片輸出
         var blob = new Blob(chunks);
         var vidURL = URL.createObjectURL(blob);
         var vid = document.createElement('video');
@@ -106,7 +101,7 @@
         };
         $('#resultWrap').append(vid);
         //指定下載格式，這一部份還要再處理XD，我今天時間不夠
-        downloadlink.download = 'capture';
+        downloadlink.download = 'capture.mpeg';
         downloadlink.href = vidURL;
 
     };

@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "影片截圖範例",
-    "description": "按一下開始錄影，再按一下儲存",
+    "description": "影片截圖範例",
     "version": "2.0",
     "browser_action": {
-        "default_title": "按一下開始錄影，再按一下儲存",
+        "default_title": "影片截圖範例",
         "default_icon": "play_icon.png"
     },
     "background": {
