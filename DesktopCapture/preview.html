@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.css">
+    <style>
+    .content {
+    	width: 1860px;	
+    	margin: 0 auto;
+    }
+    .col {
+        width: 600px;
+        margin: 10px;
+        float: left;
+    }
+    .box {
+        width: 600px;
+        height: 400px;
+        background: #ededed;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    .btn {
+    	font-size: 24px;
+    }
+    .ctrls {
+        margin: 30px 10px;
+        clear: both;
+    }
+    
+    .clearfix {
+        overflow: auto;
+        zoom: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p class="ctrls">
+            <a id="recodBtn" class="btn btn-primary btn-large btn-block" href="#"><span class="fui-video-24"></span>開始錄制</a>
+            <a id="stopBtn" class="btn btn-large btn-block btn-danger" href="#">停止錄制</a>
+            <a id="downloadBtn" class="btn btn-large btn-block btn-primary " href="#">影片下載</a>
+        </p>
+        <div class="row clearfix">
+            <div class="live col">
+                <h3>即時的串流畫面</h3>
+                <video id="video" class="box" autoplay></video>
+            </div>
+            <div class="capture col">
+                <h3>Canvas的截錄畫面</h3>
+                <canvas id="canvas" class="box"></canvas>
+            </div>
+            <div class="result col">
+                <h3>輸出影片</h3>
+                <div id="resultWrap" class="box">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="preview.js"></script>
+</body>
+
+</html>
