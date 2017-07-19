@@ -7,7 +7,7 @@
 
 ## 結果：2017 iT 邦幫忙鐵人賽 Modern Web 佳作
 
-![佳作](http://i.imgur.com/lfhyngN.png)
+![佳作](http://i.imgur.com/lfhyngN.png=100x100)
 
 
 ## 文章列表 
