@@ -3,6 +3,10 @@
     "name": "鐵人賽-事件腳本範例",
     "description": "羅拉拉的事件腳本範例",
     "version": "2.0",
+    "permissions": [
+        "activeTab"
+    ],
+    // 如果想取得 tab 資訊的話，需要事先跟使用者取得權限
     "browser_action": {
         "default_title": "羅拉拉的事件腳本範例",
         "default_icon": { 
@@ -17,4 +21,5 @@
         "scripts" : ["event.js"],
         "persistent" : false
     }
+
 }
