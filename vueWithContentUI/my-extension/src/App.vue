@@ -32,7 +32,7 @@
             <!-- v-on:click  綁定點擊事件會執行長相的切換 -->
             <a class="contentUI__button" href="#" v-on:click="switchView">切換長相</a>           
           </div>
-        <transition>        
+        </transition>        
     </div>
 </template>
 
